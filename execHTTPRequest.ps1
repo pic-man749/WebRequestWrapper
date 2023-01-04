@@ -36,7 +36,7 @@ class execHTTPRequest{
     
             return $true
         }catch{
-            # Write-host $_
+            $this.statusCode = $_.Exception.Response.StatusCode.Value__
             return $false
         }
     }
